@@ -9,6 +9,13 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   plugins: ['@typescript-eslint'],
+  env: {
+    node: true,  // Enable Node.js global variables
+    browser: true, // Enable browser global variables
+  },
+  globals: {
+    process: 'readonly', // Treat process as a global variable
+  },
   rules: {
     // Your custom rules here
     "@typescript-eslint/array-type": "off",
