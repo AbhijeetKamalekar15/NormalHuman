@@ -1,21 +1,21 @@
-/** @type {import("eslint").Linter.Config} */
-const config = {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": true
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-  "plugins": [
-    "@typescript-eslint"
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  "extends": [
-    "next/core-web-vitals",
-    // "plugin:@typescript-eslint/recommended-type-checked",
-    // "plugin:@typescript-eslint/stylistic-type-checked"
-  ],
-  "rules": {
+  plugins: ['@typescript-eslint'],
+  rules: {
+    // Your custom rules here
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
-    
-  }
+
+  },
 };
-module.exports = config;
+
+
+
